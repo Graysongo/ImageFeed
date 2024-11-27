@@ -10,14 +10,8 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Задержка для теста (проверить размер лого) - убрать в конце
-        // Thread.sleep(forTimeInterval: 3.0)
-        
         return true
     }
 
