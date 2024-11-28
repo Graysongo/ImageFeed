@@ -8,9 +8,20 @@
 import UIKit
 
 final class ImagesListCell: UITableViewCell {
+    // MARK: - Properties
     static let reuseIdentifier = "ImagesListCell"
-    @IBOutlet weak var cellImage: UIImageView!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
+    
+    // MARK: - Private Outlets
+    @IBOutlet private weak var cellImage: UIImageView!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var likeButton: UIButton!
+    
+    // MARK: - Configuration Method
+    func configure(image: UIImage?, dateText: String, isLiked: Bool) {
+        cellImage.image = image
+        dateLabel.text = dateText
+        
+        let likeImage = isLiked ? UIImage(named: "LikeButtonOn") : UIImage(named: "LikeButtonOff")
+        likeButton.setImage(likeImage, for: .normal)
+    }
 }
-
